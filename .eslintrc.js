@@ -37,8 +37,8 @@ module.exports = {
     'comma-dangle': 'off',
     'vue/html-self-closing': [1, {
       html: {
-        void: 'never',
-        normal: 'always',
+        void: 'always',
+        normal: 'never',
         component: 'always'
       },
       svg: 'always',
@@ -54,6 +54,10 @@ module.exports = {
     }],
     'no-unused-vars': 0,
     'vue/no-unused-components': 0,
+    'vue/html-closing-bracket-newline': ['error', {
+      singleline: 'never',
+      multiline: 'always'
+    }]
   },
   globals: {
     defineProps: 'readonly',

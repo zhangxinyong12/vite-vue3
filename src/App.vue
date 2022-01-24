@@ -1,4 +1,10 @@
 <template>
+  <ul>
+    <li>
+      <router-link to="home">Home</router-link>
+    </li>
+  </ul>
+  <router-view />
   <div>
     <h1 class="blue">vite vue3 ts</h1>
     <h3>n:{{ n }}</h3>

@@ -1,7 +1,12 @@
 import { createApp } from 'vue'
-
-import './styles/index.scss'
+import router from './router'
+import store from './store'
 
 import App from './App.vue'
 
-createApp(App).mount('#app')
+import Antd from 'ant-design-vue'
+import 'ant-design-vue/dist/antd.css'
+
+import './styles/index.scss'
+
+createApp(App).use(Antd).use(store).use(router).mount('#app')

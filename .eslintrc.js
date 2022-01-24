@@ -4,8 +4,8 @@ module.exports = {
     es2021: true
   },
   extends: [
-    'plugin:vue/vue3-strongly-recommended'
-    // 'standard'
+    'plugin:vue/vue3-strongly-recommended',
+    'standard'
   ],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -32,7 +32,9 @@ module.exports = {
   ],
   rules: {
     'vue/no-unused-vars': 'off',
-    'vue/singleline-html-element-content-newline': 'off'
+    'vue/singleline-html-element-content-newline': 'off',
+    'space-before-function-paren': 'off',
+    'comma-dangle': 'off'
 
   },
   globals: {

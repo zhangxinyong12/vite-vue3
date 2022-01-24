@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "vite --open",
+    "start": "npm run dev",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",

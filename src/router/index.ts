@@ -1,11 +1,21 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 // 路由信息
-const routes = [
+const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    name: 'Home',
+    name: 'Index',
     component: () => /* Home */ import('@/views/home')
+  },
+  // {
+  //   path: '/Home',
+  //   name: 'Home',
+  //   redirect: '/'
+  // },
+  {
+    path: '/:pathMath(.*)',
+    name: 'IndexHome',
+    redirect: '/'
   }
 ]
 

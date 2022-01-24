@@ -34,8 +34,26 @@ module.exports = {
     'vue/no-unused-vars': 'off',
     'vue/singleline-html-element-content-newline': 'off',
     'space-before-function-paren': 'off',
-    'comma-dangle': 'off'
-
+    'comma-dangle': 'off',
+    'vue/html-self-closing': [1, {
+      html: {
+        void: 'never',
+        normal: 'always',
+        component: 'always'
+      },
+      svg: 'always',
+      math: 'always'
+    }],
+    'vue/max-attributes-per-line': [1, {
+      singleline: {
+        max: 8
+      },
+      multiline: {
+        max: 20
+      }
+    }],
+    'no-unused-vars': 0,
+    'vue/no-unused-components': 0,
   },
   globals: {
     defineProps: 'readonly',

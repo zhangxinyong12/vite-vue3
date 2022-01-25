@@ -22,16 +22,22 @@
       class="mouse"
       :style="{ transform: `translate(${x}px, ${y}px)` }"
     ></div>
+    <div>
+      <Rate v-model="n" />
+    </div>
   </div>
 </template>
+
 <script lang="ts" setup>
 import { useMouse } from '@/utils'
 import { computed, ref } from 'vue'
 import useTodos from './useTodos'
-
+import Rate from './rate.vue'
 const { title, todos, addTodo, clear, active, all, allDone } = useTodos()
 const { x, y } = useMouse()
+const n = ref(2.3)
 </script>
+
 <style lang="scss" scoped>
 .todo-list {
   text-align: left;

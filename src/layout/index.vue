@@ -5,9 +5,13 @@
     >
       <div class="logo" :style="{ height: '70px' }">Logo</div>
       <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
-        <a-menu-item key="1" @click="gotoPage('home')">
+        <a-menu-item key="home" @click="gotoPage('home')">
           <user-outlined />
           <span class="nav-text">Home</span>
+        </a-menu-item>
+        <a-menu-item key="about" @click="gotoPage('about')">
+          <user-outlined />
+          <span class="nav-text">about</span>
         </a-menu-item>
       </a-menu>
     </a-layout-sider>

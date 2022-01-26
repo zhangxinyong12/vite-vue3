@@ -10,7 +10,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/about',
     name: 'About',
-    component: () => /* About */ import('@/views/about/index.vue')
+    component: () => /* About */ import('@/views/about')
   },
   {
     path: '/:pathMath(.*)',

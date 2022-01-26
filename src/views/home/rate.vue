@@ -24,9 +24,14 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, computed, ref, defineEmits } from 'vue'
+import { computed, ref } from 'vue'
 
-const props = defineProps({
+interface RateProps {
+  modelValue: number
+  theme: string
+}
+
+const props: RateProps = defineProps({
   modelValue: {
     type: Number,
     required: true,

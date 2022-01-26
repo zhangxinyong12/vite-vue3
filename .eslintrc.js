@@ -58,6 +58,7 @@ module.exports = {
       singleline: 'never',
       multiline: 'always'
     }],
+    'vue/require-default-prop': 0,
   },
   globals: {
     defineProps: 'readonly',

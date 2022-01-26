@@ -1,12 +1,14 @@
 import { computed, defineComponent, onMounted, reactive, ref } from 'vue'
 import { useStore } from 'vuex'
 import ZButton from './button'
+import ZInput from './input'
 
 export default defineComponent({
   props: {},
   emits: [],
   components: {
     ZButton,
+    ZInput,
   },
   setup(props, ctx) {
     const store = useStore()
@@ -34,6 +36,10 @@ export default defineComponent({
     const slotLeft = {
       left: () => <div>left slot</div>,
     }
+    const ipt = ref('input')
+    function onChange(e: string) {
+      console.log(e)
+    }
     return () => (
       <div>
         <span>n:{n.value}</span> <br />
@@ -57,6 +63,9 @@ export default defineComponent({
         <div>
           <h3 v-show={time.value % 2}>当前时间戳能被5整除才显示</h3>
           <h3 v-show={time.value % 5}>当前时间戳不能被5整除才显示</h3>
+        </div>
+        <div>
+          <ZInput value={ipt.value} onChange={onChange}></ZInput>
         </div>
       </div>
     )

@@ -42,10 +42,6 @@ const props: RateProps = defineProps({
   },
 })
 
-const rate = computed(() =>
-  '★★★★★☆☆☆☆☆'.slice(5 - props.modelValue, 10 - props.modelValue)
-)
-
 const themeObj: {
   [key: string]: string
 } = {
